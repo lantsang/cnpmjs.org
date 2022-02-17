@@ -213,7 +213,7 @@ var config = {
 
   // upstream registry is base on cnpm/cnpmjs.org or not
   // if your upstream is official npm registry, please turn it off
-  sourceNpmRegistryIsCNpm: false,
+  sourceNpmRegistryIsCNpm: true,
 
   // if install return 404, try to sync from source registry
   syncByInstall: true,
