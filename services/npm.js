@@ -159,6 +159,8 @@ exports.getShort = function* (timeout) {
     // registry.npmjs.org/-/short is 404 now therefore have a fallback
     registry: registry,
   });
+  console.log(r);
+  //TODO: add console log here
   if (r.status !== 200) {
     const data = r.data;
     if (data && data.code && data.message) {
