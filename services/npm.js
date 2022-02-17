@@ -153,7 +153,8 @@ exports.getAllToday = function* (timeout) {
 };
 
 exports.getShort = function* (timeout) {
-  const registry = config.sourceNpmRegistryIsCNpm ? config.sourceNpmRegistry : 'https://registry.npmmirror.com';
+  //
+  const registry = config.sourceNpmRegistryIsCNpm ? config.sourceNpmRegistry : 'http://registry.npmjs.org';
   var r = yield request('/-/short', {
     timeout: timeout || 300000,
     // registry.npmjs.org/-/short is 404 now therefore have a fallback
