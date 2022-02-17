@@ -28,7 +28,7 @@ var config = {
 
   registryPort: 7001,
   webPort: 7002,
-  bindingHost: '127.0.0.1', // only binding on 127.0.0.1 for local access
+  bindingHost: '0.0.0.0', // only binding on 127.0.0.1 for local access
   // default is ctx.protocol
   protocol: '',
   // When sync package, cnpm not know the access protocol.
@@ -119,11 +119,11 @@ var config = {
   database: {
     db: 'cnpmjs_test',
     username: 'root',
-    password: '',
+    password: '1qaz2wsx#EDC',
 
     // the sql dialect of the database
     // - currently supported: 'mysql', 'sqlite', 'postgres', 'mariadb'
-    dialect: 'sqlite',
+    dialect: 'mysql',
 
     // custom host; default: 127.0.0.1
     host: '127.0.0.1',
@@ -146,7 +146,7 @@ var config = {
 
     // the storage engine for 'sqlite'
     // default store into ~/.cnpmjs.org/data.sqlite
-    storage: path.join(dataDir, 'data.sqlite'),
+    storage: path.join(dataDir, 'data.mysql'),
 
     logging: !!process.env.SQL_DEBUG,
   },
@@ -222,7 +222,7 @@ var config = {
   // none: do not sync any module, proxy all public modules from sourceNpmRegistry
   // exist: only sync exist modules
   // all: sync all modules
-  syncModel: 'none', // 'none', 'all', 'exist'
+  syncModel: 'all', // 'none', 'all', 'exist'
   // sync package.json/dist-tag.json to sync dir
   syncBackupFiles: false,
 
