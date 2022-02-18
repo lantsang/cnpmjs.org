@@ -153,15 +153,12 @@ exports.getAllToday = function* (timeout) {
 };
 
 exports.getShort = function* (timeout) {
-  //
   const registry = config.sourceNpmRegistryIsCNpm ? config.sourceNpmRegistry : 'http://registry.npmjs.org';
   var r = yield request('/-/short', {
     timeout: timeout || 300000,
     // registry.npmjs.org/-/short is 404 now therefore have a fallback
     registry: registry,
   });
-  console.log(r);
-  //TODO: add console log here
   if (r.status !== 200) {
     const data = r.data;
     if (data && data.code && data.message) {

@@ -178,9 +178,9 @@ var config = {
   // none: do not sync any module, proxy all public modules from sourceNpmRegistry
   // exist: only sync exist modules
   // all: sync all modules
-  syncModel: 'none', // 'none', 'all', 'exist'
+  syncModel: 'all', // 'none', 'all', 'exist'
 
-  syncConcurrency: 1,
+  syncConcurrency: 10,
   // sync interval, default is 10 minutes
   syncInterval: '10m',
 
