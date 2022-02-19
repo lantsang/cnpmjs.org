@@ -180,7 +180,7 @@ var config = {
   // all: sync all modules
   syncModel: 'all', // 'none', 'all', 'exist'
 
-  syncConcurrency: 10,
+  syncConcurrency: 2,
   // sync interval, default is 10 minutes
   syncInterval: '10m',
 
